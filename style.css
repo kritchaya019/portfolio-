@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Prompt', sans-serif;
+}
+
+body {
+    background:
+        radial-gradient(circle at top left, #dff1ff, transparent 60%),
+        radial-gradient(circle at bottom right, #cfe9ff, transparent 60%),
+        #eef6ff;
+    color: #0a2a43;
+    line-height: 1.7;
+}
+
+/* ===================== HEADER CORE ===================== */
+header {
+    position: relative;
+    padding: 80px 10%;
+    background:
+        linear-gradient(135deg, #3b82f6, #93c5fd);
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+/* ===================== DOT PATTERN (เล็ก) ===================== */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(rgba(255,255,255,0.45) 1.5px, transparent 1.5px);
+    background-size: 18px 18px;
+    opacity: 0.6;
+}
+
+/* ===================== GRID TECH ===================== */
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px);
+    background-size: 70px 70px;
+    opacity: 0.4;
+}
+
+/* ===================== HEADER CONTENT ===================== */
+.header-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+/* ===================== LIGHT SWEEP ===================== */
+.header-content::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    background:
+        linear-gradient(
+            120deg,
+            transparent 30%,
+            rgba(255,255,255,0.25) 50%,
+            transparent 70%
+        );
+    z-index: -1;
+}
+
+/* ===================== CIRCULAR TECH RING ===================== */
+.header-content::after {
+    content: "";
+    position: absolute;
+    top: -120px;
+    right: -140px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 4px dashed rgba(255,255,255,0.5);
+    box-shadow: inset 0 0 40px rgba(255,255,255,0.3);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* ===================== PROFILE IMAGE ===================== */
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35),
+        0 0 0 12px rgba(255,255,255,0.2);
+}
+
+/* ===================== TEXT ===================== */
+header h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow:
+        0 5px 15px rgba(0,0,0,0.35);
+}
+
+header p {
+    color: #eef6ff;
+    font-weight: 500;
+}
+
+/* ===================== TAGLINE CHIP ===================== */
+.tagline {
+    margin-top: 12px;
+    display: inline-block;
+    padding: 10px 26px;
+    border-radius: 30px;
+    background:
+        linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0.15));
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.45),
+        0 8px 25px rgba(0,0,0,0.25);
+}
+
+/* ===================== BIG TECH DOT ===================== */
+header .tech-dot {
+    position: absolute;
+    bottom: 50px;
+    left: 80px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, rgba(255,255,255,0.35) 18%, transparent 20%);
+    background-size: 14px 14px;
+    opacity: 0.6;
+}
+
+/* ===================== EXTRA NODE ===================== */
+header .tech-node {
+    position: absolute;
+    top: 40%;
+    right: 20%;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 6px rgba(255,255,255,0.25),
+        0 0 20px rgba(255,255,255,0.8);
+}
+
+
+/* ================= SECTION ================= */
+section {
+    padding: 60px 10%;
+    position: relative;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    width: 60px;
+    height: 6px;
+    background: linear-gradient(90deg, #4dabf7, #a5d8ff);
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 8px solid #4dabf7;
+}
+
+/* ================= CARD ================= */
+.card {
+    background:
+        linear-gradient(180deg, #ffffff, #f4faff);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.12),
+        inset 0 0 0 2px #e3f2fd;
+    position: relative;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    background: #4dabf7;
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+/* ================= GRID ================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* ================= SKILLS ================= */
+.skills {
+    background:
+        linear-gradient(180deg, #f1f8ff, #e3f2fd);
+    border-radius: 40px;
+    padding: 50px 10%;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.05);
+}
+
+.skill-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.skill-box span {
+    background:
+        linear-gradient(135deg, #4dabf7, #74c0fc);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(77,171,247,0.4);
+    letter-spacing: 0.5px;
+}
+
+/* ================= PROJECTS ================= */
+.projects img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.projects .card h3 {
+    margin-bottom: 8px;
+}
+
+/* ================= CERTIFICATES ================= */
+.certificates {
+    background:
+        linear-gradient(135deg, #dbeeff, #f2f9ff);
+    border-radius: 40px;
+    padding: 60px 10%;
+}
+
+.cert-img {
+    width: 100%;
+    border-radius: 18px;
+    border: 5px solid white;
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background:
+        linear-gradient(135deg, #4dabf7, #9fd3ff);
+    text-align: center;
+    padding: 25px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 60px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
